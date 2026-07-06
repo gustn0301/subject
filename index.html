@@ -244,9 +244,9 @@
     </div>
     <div class="ledger-body">
       <div class="field">
-        <label for="in-id">학번 (1로 시작하는 4자리)</label>
-        <input id="in-id" maxlength="4" inputmode="numeric" placeholder="예: 1105">
-        <div class="hint">맨 앞자리는 반드시 1, 이후 숫자 3자리</div>
+        <label for="in-id">학번</label>
+        <input id="in-id" maxlength="4" inputmode="numeric" placeholder="예: 1021">
+        <div class="hint"></div>
       </div>
       <div class="field">
         <label for="in-name">이름</label>
@@ -881,7 +881,7 @@ async function handleStart(){
   const name = nameEl.value.trim();
 
   if(!/^1\d{3}$/.test(id)){
-    statusEl.textContent = '학번은 1로 시작하는 4자리 숫자로 입력해주세요.';
+    statusEl.textContent = '잘못된 학번입니다. 다시 입력해주세요.';
     statusEl.className = 'status-line err';
     return;
   }
